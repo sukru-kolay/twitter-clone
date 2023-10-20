@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="App">
       <h1>Şükrü KOLAY</h1>
+      <h2>Twitter Clone</h2>
     </div>
   );
 }
