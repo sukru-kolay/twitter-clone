@@ -3,7 +3,7 @@ import { MainLayout } from "../../layouts/main";
 
 const Home = () => {
   return (
-    <MainLayout>homem</MainLayout>
+    <div>home</div>
   );
 };
 
