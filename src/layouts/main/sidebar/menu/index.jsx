@@ -1,50 +1,26 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { BiHomeCircle, BiSearch } from "react-icons/bi";
-import { MdNotificationsNone } from "react-icons/md";
 import classNames from "classnames";
+import { mainMenu } from "../../../../utils/consts";
 const Menu = () => {
   return (
     <nav className="mt-0.5 mb-1">
-      <NavLink to="/" className="py-1 block group">
-        {({ isActive }) => (
-          <div
-            className={classNames(
-              "p-3 rounded-full inline-flex items-center gap-5 group-hover:bg-[#eff3f41a] transition-colors",
-              { "font-bold": isActive }
+     { mainMenu.map((menu,index)=>(
+            <NavLink to={menu.path} className="py-1 block group">
+            {({ isActive }) => (
+              <div
+                className={classNames(
+                  "p-3 rounded-full inline-flex items-center gap-5 group-hover:bg-[#eff3f41a] transition-colors",
+                  { "font-bold": isActive }
+                )}
+              >
+                {!isActive && menu.icon.passive}
+                {isActive && menu.icon.active}
+                <div className="text-xl pr-4">{menu.title}</div>
+              </div>
             )}
-          >
-            <BiHomeCircle size={26.25} color="#e7e9ea" />
-            <div className="text-xl pr-4">Anasayfa</div>
-          </div>
-        )}
-      </NavLink>
-      <NavLink to="/explore" className="py-1 block group">
-        {({ isActive }) => (
-          <div
-            className={classNames(
-              "p-3 rounded-full inline-flex items-center gap-5 group-hover:bg-[#eff3f41a] transition-colors",
-              { "font-bold": isActive }
-            )}
-          >
-            <BiSearch size={26.25} color="#e7e9ea" />
-            <div className="text-xl pr-4">Keşfet</div>
-          </div>
-        )}
-      </NavLink>
-      <NavLink to="/notifications" className="py-1 block group">
-        {({ isActive }) => (
-          <div
-            className={classNames(
-              "p-3 rounded-full inline-flex items-center gap-5 group-hover:bg-[#eff3f41a] transition-colors",
-              { "font-bold": isActive }
-            )}
-          >
-            <MdNotificationsNone size={26.25} color="#e7e9ea" />
-            <div className="text-xl pr-4">Bildirimler</div>
-          </div>
-        )}
-      </NavLink>
+          </NavLink>
+     ))}
     </nav>
   );
 };
