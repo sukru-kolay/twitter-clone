@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { BiHomeCircle, BiSearch } from "react-icons/bi";
+import { MdNotificationsNone } from "react-icons/md";
 import classNames from "classnames";
 const Menu = () => {
   return (
@@ -28,6 +29,19 @@ const Menu = () => {
           >
             <BiSearch size={26.25} color="#e7e9ea" />
             <div className="text-xl pr-4">Keşfet</div>
+          </div>
+        )}
+      </NavLink>
+      <NavLink to="/notifications" className="py-1 block group">
+        {({ isActive }) => (
+          <div
+            className={classNames(
+              "p-3 rounded-full inline-flex items-center gap-5 group-hover:bg-[#eff3f41a] transition-colors",
+              { "font-bold": isActive }
+            )}
+          >
+            <MdNotificationsNone size={26.25} color="#e7e9ea" />
+            <div className="text-xl pr-4">Bildirimler</div>
           </div>
         )}
       </NavLink>
