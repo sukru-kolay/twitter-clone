@@ -3,9 +3,15 @@ import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider } from "react-router-dom";
 import routes from "./routes";
-import './assets/css/tailwind.css'
+import "./assets/css/tailwind.css";
+import { Provider } from "react-redux";
+import store from "./store";
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={routes}></RouterProvider>);
+root.render(
+  <Provider store={store}>
+    <RouterProvider router={routes}></RouterProvider>
+  </Provider>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
