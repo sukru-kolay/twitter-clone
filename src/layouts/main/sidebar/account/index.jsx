@@ -5,17 +5,15 @@ export const Account = () => {
   return (
     <div className="mt-auto">
       <Popover>
-        <Popover.Button className="my-3 p-3 rounded-full  w-[89%] bg-[red]">
-          <div className="flex align-center">
-            <div>
+        <Popover.Button className="my-3 p-3 rounded-full hover:bg-[#eff3f41a] w-full flex text-left items-center">
               <img
                 src={account.avatar}
-                alt="Logo"
                 className="w-10 h-10 rounded-full"
               />
-            </div>
-            <div className="m-3">{account.username}</div>
-          </div>
+              <div className="mx-3 text-[15px]">
+                <h6 className="font-bold leading-[20px]">{account.fullName}</h6>
+                <div className=" text[#71767b]">@{account.username}</div>
+              </div>
         </Popover.Button>
         <Popover.Panel>açılacak</Popover.Panel>
       </Popover>

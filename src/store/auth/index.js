@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   currentAccount: {
     id: 1,
+    fullName:"Şükrü Kolay",
     username: "sukrukolay",
     avatar:
       "https://media.licdn.com/dms/image/D4D03AQFTpOChjWjs9Q/profile-displayphoto-shrink_400_400/0/1672423003048?e=1704326400&v=beta&t=V0lwz6w8EMcLSweW94-1KwlRiuA8fouThUDkUKpnqC8",
