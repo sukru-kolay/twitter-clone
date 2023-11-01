@@ -7,7 +7,22 @@ const initialState = {
     avatar:
       "https://media.licdn.com/dms/image/D4D03AQFTpOChjWjs9Q/profile-displayphoto-shrink_400_400/0/1672423003048?e=1704326400&v=beta&t=V0lwz6w8EMcLSweW94-1KwlRiuA8fouThUDkUKpnqC8",
   },
-  accounts: [],
+  accounts: [
+    {
+      id: 1,
+      fullName:"Şükrü Kolay",
+      username: "sukrukolay",
+      avatar:
+        "https://media.licdn.com/dms/image/D4D03AQFTpOChjWjs9Q/profile-displayphoto-shrink_400_400/0/1672423003048?e=1704326400&v=beta&t=V0lwz6w8EMcLSweW94-1KwlRiuA8fouThUDkUKpnqC8",
+    },
+    {
+      id: 2,
+      fullName:"İsmail Kartal ",
+      username: "arapismail",
+      avatar:
+        "https://img.a.transfermarkt.technology/portrait/big/6366-1696013891.png?lm=1"
+    },
+  ],
 };
 const auth = createSlice({
   name: "auth",
