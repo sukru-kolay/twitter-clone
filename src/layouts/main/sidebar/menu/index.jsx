@@ -4,9 +4,11 @@ import classNames from "classnames";
 import { mainMenu } from "../../../../utils/consts";
 import { More } from "./more";
 import { NewTweet } from "./new";
+import { useAccount } from "../../../../store/auth/hooks";
 const Menu = () => {
+  const account = useAccount();
   return (
-    <nav className="mt-0.5 mb-1">
+    <nav className="mt-0.5 mb-1" key={account}>
       {mainMenu.map((menu, index) => (
         <NavLink
           key={index}
