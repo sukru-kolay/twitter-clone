@@ -24,7 +24,7 @@ const Search = () => {
         </svg>
         </div>
         <input type="text" 
-            className = "w-full h-full bg-transparent rounded-full outline-none pl-[56px] text-[15px]" 
+            className = "w-full h-full placeholder-[#71767b] bg-transparent rounded-full outline-none pl-[56px] text-[15px]" 
             placeholder = "Ara" 
             onFocus={()=>setFocus(true)}
             // onBlur={()=>setFocus(false)} 
